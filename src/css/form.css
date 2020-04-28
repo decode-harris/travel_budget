@@ -1,0 +1,162 @@
+@import 'main.css';
+
+/* global : reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+/* global : variables */
+:root {
+    /* spacing */
+    --sp-sm: 5%;
+    --sp-md: 10%;
+    --sp-lg: 20%;
+
+    /* color */
+    --main: rgb(0, 0, 0);
+    --alt: rgb(155, 155, 155);
+    --sub: rgb(255, 255, 255);
+    --acc: rgb(10, 177, 93);
+
+    
+    /* === dev borders === */
+    --wireframe: 3px solid darkblue;
+    --component: 3px dotted darkgreen;
+    --debugging: 3px dotted darkred;
+
+}
+/* global : css */
+html, body {
+    scroll-behavior: smooth;
+}
+
+/* form : form */
+.form {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: minmax(25px, auto);
+    gap: 10px;
+
+    border: var(--wireframe);
+    background: rgba(0, 0, 0, 0.8);
+
+    margin: 5% 10% 5% 10%;
+    /* margin: 5% 10%; */
+
+    /* height: 100%;
+    width: 100%; */
+}
+.form .elmnts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+
+    /* margin: var(--sp-sm); */
+}
+.form .elmnts:nth-child(1) {
+    grid-column: span 6;
+    grid-row: span 1;
+}
+.form .elmnts:nth-child(2) {
+    grid-column: span 6;
+    grid-row: span 1;
+}
+.form .elmnts:nth-child(3) {
+    grid-column: span 6;
+    grid-row: span 1;
+}
+.form .elmnts:nth-child(4) {
+    grid-column: span 6;
+    grid-row: span 1;
+}
+.form .elmnts:nth-child(5) {
+    grid-column: span 6;
+    grid-row: span 1;
+}
+.form .elmnts:nth-child(6) {
+    grid-column: span 6;
+    grid-row: span 1;
+}
+.form h2 {
+    color: var(--sub);
+    font-size: 1.45rem;
+    padding: var(--sp-sm);
+}
+.form p {
+    color: var(--sub);
+    font-size: 1.10rem;
+    letter-spacing: 4px;
+    font-style: italic;
+    padding: var(--sp-sm);
+}
+.form label {
+    color: var(--sub);
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    padding-bottom: var(--sp-sm);
+    padding-left: var(--sp-sm);
+    
+    text-transform: capitalize;
+}
+.form input {
+    background: transparent;
+    border-top: 0px solid #FFF;
+    border-right: 0px solid #FFF;
+    border-left: 0px solid #FFF;
+    border-bottom: 3px solid #FFF;
+    border-radius: 0px;
+
+    color: var(--sub);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-align: left;
+    
+    padding: 5% 10%;
+    margin: 0% 15%;
+    width: 70%;
+    
+    transition: 200ms all ease-in;
+}
+.form input:focus {
+    border-top: 3px solid #FFF;
+    border-right: 3px solid #FFF;
+    border-left: 3px solid #FFF;
+    border-radius: 20px;
+    
+    width: 90%;
+
+    transition: 200ms all ease-in;
+}
+.form button {
+    margin-top: var(--sp-md);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: var(--sp-md);
+
+    height: 100%;
+    width: 100%;
+    max-width: 200px;
+    padding: var(--sp-sm);
+
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+
+    background: transparent;
+    border: 3px solid #FFF;
+    border-radius: 20px;
+    color: var(--sub);
+
+    transition: 200ms all ease-in;
+}
+.form button:hover {
+    background: var(--acc);
+    letter-spacing: 4px;
+    text-decoration: underline;
+
+    transition: 120ms all ease-in;
+}

@@ -1,0 +1,213 @@
+@import 'main.css';
+
+/* global : reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+/* global : variables */
+:root {
+    /* spacing */
+    --sp-sm: 5%;
+    --sp-md: 10%;
+    --sp-lg: 20%;
+
+    /* color */
+    --main: rgb(0, 0, 0);
+    --alt: rgb(155, 155, 155);
+    --sub: rgb(255, 255, 255);
+    --acc: rgb(10, 177, 93);
+
+    
+    /* === dev borders === */
+    --wireframe: 3px solid darkblue;
+    --component: 3px dotted darkgreen;
+    --debugging: 3px dotted darkred;
+
+}
+/* global : css */
+html, body {
+    scroll-behavior: smooth;
+}
+
+/* media : desktop */
+@media (min-width: 900px) {
+    /* header : header */
+    .header {
+        min-height: 30vh;
+    }
+    .header .elmnts:nth-child(1) {
+        grid-column: span 4;
+
+    }
+    .header .elmnts:nth-child(2) {
+        grid-column: span 2;
+
+    }
+
+    /* nav : nav */
+    .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: left;
+        text-align: left;
+        
+    }
+    .nav a {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        
+        color: var(--main);
+        font-size: 1.05rem;
+        letter-spacing: 2px;
+        
+        text-transform: capitalize;
+        text-decoration: none;
+    
+        height: 100%;
+        width: 100%;
+        
+        /* border: var(--debugging); */
+    }
+    .nav i {
+        
+        font-size: 1.3rem;
+        padding-right: var(--sp-sm);
+    }
+    .nav {
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        margin: var(--sp-md);
+    }
+    .nav a {
+        padding: 0;
+        margin: auto;
+        /* border: var(--wireframe); */
+    }
+    .nav i {
+        font-size: 1.8rem;
+    }
+
+    /* main : dashboard */
+    .dashboard {
+        display: grid;
+        /* grid-template-columns: repeat(6, 1fr);
+        grid-auto-rows: minmax(25px, auto); */
+    
+        grid-template-columns: 1.5em 1fr 1.5em;
+        grid-template-areas: 
+            ". title ."
+            ". form ."
+            " .lists ."
+            ". overview ."
+            
+        
+    
+        /* min-height: 80vh; */
+    }
+    /* .dashboard {
+        grid-template-columns: repeat(12, 1fr);
+        grid-auto-rows: minmax(10px, auto);
+        gap: 5px;
+
+        padding: 5% 10% 5% 5%;
+    } */
+    /* .dashboard .elmnts {
+        height: 100%;
+        width: 100%;
+    }
+    .dashboard .elmnts:nth-child(1) {
+        grid-column: span 8;
+        grid-row: span 4;
+    }
+    .dashboard .elmnts:nth-child(2) {
+        grid-column: span 4;
+        grid-row: span 1;
+    }
+    .dashboard .elmnts:nth-child(3) {
+        grid-column: span 4;
+        grid-row: span 1;
+    }
+    .dashboard .elmnts:nth-child(4) {
+        grid-column: span 4;
+        grid-row: span 1;
+    }
+    .dashboard .elmnts:nth-child(5) {
+        grid-column: span 4;
+        grid-row: span 1;
+    }
+    .dashboard .elmnts:nth-child(6) {
+        grid-column: span 12;
+        grid-row: span 4;
+    } */
+
+    /* form : form */
+    .form {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: minmax(25px, auto);
+    }
+    .form .elmnts {
+        border: var(--component);
+    }
+    .form .elmnts:nth-child(1) {
+        grid-column: span 4;
+        grid-row: span 2;
+    }
+    .form .elmnts:nth-child(2) {
+        grid-column: span 8;
+        grid-row: span 2;
+    }
+    .form .elmnts:nth-child(3) {
+        grid-column: span 8;
+        grid-row: span 2;
+        
+    }
+    .form .elmnts:nth-child(4) {
+        grid-column: span 4;
+        grid-row: span 2;
+
+    }
+    .form .elmnts:nth-child(5) {
+        grid-column: span 6;
+        grid-row: span 2;
+    }
+    .form .elmnts:nth-child(6) {
+        grid-column: span 6;
+        grid-row: span 2;
+    }
+
+    .form label {
+        padding-top: var(--sp-sm);
+        /* display: none; */
+
+    }
+    .form button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* media end */
+}
