@@ -42,33 +42,29 @@ html, body {
     justify-content: center;
     align-items: center;
 
-    border: var(--wireframe);
+    /* border: var(--wireframe); */
 }
 .lists ul {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+
     align-items: center;
+    text-align: left;
     
     width: 100%;
     height: 100%;
 
-    border: var(--component);
-    /* flex-flow: wrap;
-    flex-wrap: wrap; */
-    
-    /* border: var(--wireframe); */
+    /* border: var(--component); */
 }
 .lists li {
-    /* margin-left: auto; */
-    /* border: var(--wireframe); */
-    list-style-type: none;
-    text-align: center;
-    /* padding: var(--sp-sm); */
-    margin: auto;
-
     font-size: 1.3rem;
+    list-style-type: none;
+    text-align: left;
     
-
-    /* border: var(--component); */
+    padding-left: var(--sp-md);
+    margin-right: auto;
+}
+ul li:nth-child(4) {
+    padding-bottom: var(--sp-md);
 }
